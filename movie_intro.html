@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>영화 소개</title>
+  </head>
+  <body>
+      <div id="menuToggle">
+        <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+        <input type="checkbox" />
+
+        <!--
+        Some spans to act as a hamburger.
+
+        They are acting like a real hamburger,
+        not that McDonalds stuff.
+        -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <!--
+        Too bad the menu has to be inside of the button
+        but hey, it's pure CSS magic.
+        -->
+        <ul id="menu">
+          <a href="index.html"><li>홈페이지</li></a>
+          <a href="movie_intro.html"><li>영화 소개</li></a>
+          <a href="#"><li>영화 소개 요청</li></a>
+          <a href="#"><li>공지사항</li></a>
+        </ul>
+      </div>
+      <div class="header">
+        <h1>영화 소개</h1>
+      </div>
+    <div class="movie">
+      <ul>
+        <li class="intro"><iframe width="400" height="250" src="https://www.youtube.com/embed/b3hFjI05Vgw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+        <li class="intro"><iframe width="400" height="250" src="https://www.youtube.com/embed/zjc23wvHAsE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+        <li class="intro"><iframe width="400" height="250" src="https://www.youtube.com/embed/wUFdrDukSlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+      </ul>
+    </div>
+  </body>
+</html>
