@@ -2,7 +2,7 @@
 <html lang=ko dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style_notice_main.css">
+    <link rel="stylesheet" href="css/style_notice_main.css">
     <title>Movie_Notice_Main_Page</title>
   </head>
 
@@ -10,9 +10,11 @@
     <div id="wrapper">
       <header>
         <div id="header">
-          <h1>공지사항</h1>
+          <h1>공지사항<button id = "loginbutton" type="button" name="loginbutton" onclick="location.href='Movie_Login_Page.html'">로그인</button></h1>
           <hr width = "1300px" align = "left" color = "darkgray" size = "3">
         </div>
+
+
       </header>
 
       <section>
@@ -34,7 +36,7 @@
           </table>
         </article>
 
-        <button type="button" class="button">글쓰기</button>
+        <button id = "button" type="button" onclick="location.href = 'Movie_Notice_Write_Page.html'">글쓰기</button>
       </section>
 
 

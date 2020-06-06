@@ -2,7 +2,10 @@
 <html lang="ko" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style_request.css">
+    <!- 반응형 웹 코드--->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style_request.css">
     <title>Movie_Request_Page</title>
   </head>
   <body>
@@ -12,8 +15,20 @@
           <h1>영화 요청하기</h1>
         </div>
       </header>
-
+<!--
+      <nav id = "nav">
+        <ul id = "menu">
+          <a href="Movie_Request_Page.html">영화 소개 요청</a>
+          <a href="Movie_Notice_Main_Page.html"></a>
+        </ul>
+      </nav>
+-->
       <section>
+        <div class="text">
+          <h3> 보고 싶으신 영화가 있나요? 아래에 제목을 입력해 보내주세요.<br>
+          작품 제안 예시 : "아이언맨", "어벤져스,엔드게임", "스파이더맨"등 </h3>
+        </div>
+
         <div class="textbox">
           <label for="ex_input1">작품 제안 1. </label>
           <input type="text" id="ex_input1">
@@ -40,9 +55,6 @@
       </section>
 
       <footer>
-        <div id="footer">
-          footer
-        </div>
       </footer>
 
   </div>
