@@ -100,4 +100,5 @@ button#signUp{
   margin-top: 15px;
   outline: none;
   align: right;
+  cursor: pointer;
 }

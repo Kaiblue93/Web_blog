@@ -6,51 +6,105 @@
     <meta name="description" content="인기있는 영화들을 소개하기 위한 홈페이지 입니다.">
 
     <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_main.css">
     <title>Silver Castle의 영화세상</title>
   </head>
   <body>
-    <nav role="navigation">
-      <div id="menuToggle">
-        <!--
-        A fake / hidden checkbox is used as click reciever,
-        so you can use the :checked selector on it.
-        -->
-        <input type="checkbox" />
+    <!-- 전체영역 -->
+    <div id=wrap>
+      <!-- 헤더 영역 -->
+      <header>
+        <h1>Silver Castle의 영화 세상</h1>
+      </header>
+      <!-- 네비게이션 바 -->
+      <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
 
-        <!--
-        Some spans to act as a hamburger.
+          <!--
+          Some spans to act as a hamburger.
 
-        They are acting like a real hamburger,
-        not that McDonalds stuff.
-        -->
-        <span></span>
-        <span></span>
-        <span></span>
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
 
-        <!--
-        Too bad the menu has to be inside of the button
-        but hey, it's pure CSS magic.
-        -->
-        <ul id="menu">
-          <a href="index.html"><li>홈페이지</li></a>
-          <a href="movie_intro.html"><li>영화 소개</li></a>
-          <a href="#"><li>영화 소개 요청</li></a>
-          <a href="#"><li>공지사항</li></a>
-        </ul>
-      </div>
-    </nav>
-    <div class="header">
-      <h1>Silver Castle의 영화 세상</h1>
-    </div>
-    <div class="nav">
-
-    </div>
-    <div class="contents">
-
-    </div>
-    <div class="footer">
-
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a href="index.html"><li>홈페이지</li></a>
+            <a href="movie_intro.html"><li>영화 소개</li></a>
+            <a href="Movie_Request_Page.html"><li>영화 소개 요청</li></a>
+            <a href="Movie_Notice_Main_Page.html"><li>공지사항</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- 컨텐츠 영역 -->
+      <section>
+        <!-- 영화 예고영상 -->
+        <article class="mv_trailer">
+          <h2>영화 포스터</h2>
+          <p align="center"><iframe style="border-radius: 20px;" width="600" height="350" src="https://www.youtube.com/embed/b3hFjI05Vgw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+          <div class="btn_bundle">
+            <button class="mv_button btn_color">캐리비안의 해적</button>
+            <button class="mv_button btn_color">인셉션</button>
+            <button class="mv_button btn_color">판의 미로</button>
+            <button class="mv_button btn_color">말레피센트</button>
+            <button class="mv_button btn_color">그레비티</button>
+            <button class="mv_button btn_color">존윅</button>
+          </div>
+        </article>
+        <!-- 영화 포스터 -->
+        <article class="mv_poster">
+          <h2>영화 포스터</h2>
+          <div>
+            <a href="movie_intro.html" class= "column" id = "caption">
+              <span class = "text"><h1>maleficent</h1></span><img src="images\maleficent.jpg" alt="말레피센트" width="300px" height="300px">
+            </a>
+            <a href="movie_intro.html" class= "column" id = "caption">
+              <span class = "text"><h1>gravity</h1></span><img src="images\gravity.jpg" alt="그레비티" width="300px" height="300px">
+            </a>
+            <a href="movie_intro.html" class= "column" id = "caption">
+              <span class = "text"><h1>johnwick</h1></span><img src="images\johnwick.jpg" alt="존윅" width="300px" height="300px">
+            </a>
+          </div>
+        </article>
+      </section>
+      <!-- 푸터 영역 -->
+      <footer>
+        <div class="container">
+          <div class="footer">
+            <ul>
+              <li><a href="#">사이트 도움말</a></li>
+              <li><a href="#">사이트 이용약관</a></li>
+              <li><a href="#">사이트 운영규칙</a></li>
+              <li><a href="#"><strong>개인정보취급방침</strong></a></li>
+              <li><a href="#">책임의 한계와 법적고지</a></li>
+              <li><a href="#">게시중단요청 서비스</a></li>
+              <li><a href="#">고객센터</a></li>
+            </ul>
+            <address>
+              Copyright&copy; Kaiblue.co.kr All Right Reserved
+            </address>
+            <div class="w3c">
+              <a href="http://validator.w3.org/check?uri=referer">
+                <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+              </a>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="올바른 CSS입니다!" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

@@ -1,0 +1,343 @@
+/* 그라데이션 배경화면 */
+html {
+  background: linear-gradient(to top, #642b73, #c6426e) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* 전체 틀 */
+#wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  height: 100px;
+  margin-top: 10px;
+}
+header h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+/* 네비게이션 바 */
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  top: 35px;
+  left: 40px;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: black;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  opacity: 0.9;
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.header {
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 10px;
+}
+.intro {
+  float: left;
+  padding: 5px;
+  display: inline-block;
+}
+.movie {
+  padding-top: 50px;
+}
+
+/* 컨턴츠 영역 - 예고편 */
+.mv_trailer {
+  width: 50%;
+  padding: 0 25%;
+  height: 600px;
+}
+.mv_trailer h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.mv_trailer iframe {
+
+}
+
+
+/* 예고편 변경 버튼 */
+.btn_bundle {
+  text-align: center;
+}
+.mv_button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  width: 170px;
+  color: white;
+  padding: 16px 12px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 35px 0 0;
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+.mv_button:nth-child(3n) {
+  margin-right: 0;
+}
+.btn_color {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+  border-radius: 10px;
+}
+.btn_color:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+/* 컨턴츠 영역 - 포스터 */
+.mv_poster {
+  height: 400px;
+  margin-top: 30px;
+}
+.mv_poster div {
+  text-align: center;
+}
+.mv_poster h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.mv_poster a:last-child {
+  padding-right: 0;
+}
+.mv_poster img:hover {
+  background: black;
+}
+
+/* 영화 포스터 필터 */
+.mv_poster h1 {
+font-family: 'Montserrat', sans-serif;
+text-transform: uppercase;
+}
+
+.mv_poster .column {
+display: inline-block;
+text-align: center;
+}
+
+
+.mv_poster a {
+color: black;
+margin-top: 8px;
+font-family: 'Open Sans', sans-serif;
+
+}
+
+.mv_poster a:hover {
+text-decoration: none;
+}
+
+.column img {
+display: block;
+width: 300px;
+height: 300px;
+}
+
+/*With Simple Caption*/
+.column#caption {
+position: relative;
+}
+.column#caption .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+.column#caption .text h1 {
+  margin: 0;
+  color: black;
+  font-size: 30px;
+}
+.column#caption:hover .text {
+opacity: 1;
+}
+.column#caption:hover img {
+-webkit-filter: blur(5px);
+}
+
+/* 푸터 영역 */
+.footer {
+  height: 150px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.footer ul {
+  margin-bottom: 20px;
+}
+.footer li {
+  display: inline;
+  padding: 0 10px 0 10px;
+}
+.footer li:before {
+  content: '';
+  width: 1px;
+  height: 12px;
+  background: #ccc;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+.footer li:first-child:before {
+  width: 0;
+  height: 0;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer address {
+  margin-bottom: 10px;
+}
