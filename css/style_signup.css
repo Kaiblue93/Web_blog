@@ -1,5 +1,4 @@
 body {
-  text-align: center;
   color: #000000;
   margin-left: 100px;
   margin-right: 100px;
@@ -38,13 +37,17 @@ footer{
 .textbox {
   position: relative;
   padding: 5px;
-  width: 600px;
+  width: 450px;
   height: 45px;
-  margin-left: 300px;
-  margin-right: 100px;
+  display: inline-block;
   margin-bottom: 10px;
   font-family: "나눔스퀘어라운드", serif;
 }
+
+/*
+margin-left: 300px;
+margin-right: 100px;
+*/
 
 .textbox label{
   position: absolute;
@@ -71,6 +74,21 @@ footer{
   font-family: "나눔스퀘어라운드", serif;
 }
 
+.textbox input[type="password"]{
+  width: 100%;
+  height: 45px;
+  line-height: normal;
+  padding: .20em, .20em;
+  font-family: inherit;
+  border: 1.5px solid #999;
+  border-radius: 0;
+  outline-style: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "나눔스퀘어라운드", serif;
+}
+
 button#signUp{
   width: 100px;
   background-color: #f8585b;
@@ -81,8 +99,34 @@ button#signUp{
   text-decoration: none;
   font-size: 15px;
   border-radius: 10px;
-  margin-left: 100px;
+  display: inline-block;
   margin-top: 15px;
   outline: none;
-  align: right;
+  cursor: pointer;
+}
+
+button#id_check{
+  width: 100px;
+  background-color: #f8585b;
+  border: none;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  float: right;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-left: -350px;
+  margin-right: 220px;
+  outline: none;
+  cursor: pointer;
+}
+.join_title{
+  margin-left: 360px;
+  margin-bottom: 3px;
+  margin-top: 5px;
+  font-size:14px;
+  font-weight:700;
+  text-align:left;
 }
